@@ -23,7 +23,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.2",
-    "angular-ui-router": "ui-router#~0.2.18"
+    "bootstrap": "~3.3.6",
+    "angular-ui-router": "ui-router#~0.2.18",
+    "angular": "~1.5.0"
   }
 }

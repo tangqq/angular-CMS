@@ -1,1 +1,54 @@
 $back:#ffffff;
+$hei:#000000;
+$gray-base-ecl:          #222222;
+$gray-darker-ecl:        #666666;
+$gray-dark-ecl:          #909090;
+$gray-ecl:               #cccccc;
+$gray-light-ecl:         #e5e5e5;
+$gray-lighter-ecl:       #f4f4f4;
+$bg-color:               #e9e9e9;
+$foot-color:             #b9b9b9;
+
+$bai:                    #ffffff;
+$brand-primary-ecl:      #f39800;
+$blue-light-ecl:         #2680bc;
+@mixin transition($init){
+  -webkit-transition: $init;
+  -moz-transition: $init ;
+  -ms-transition: $init ;
+  -o-transition: $init ;
+  transition: $init ;
+}
+@mixin transform($init){
+  -webkit-transform: $init;
+  -moz-transform: $init;
+  -ms-transform: $init;
+  -o-transform: $init;
+  transform: $init;
+}
+@mixin border-radius($init){
+  -webkit-border-radius:$init;
+  -moz-border-radius:$init;
+  border-radius:$init;
+}
+@mixin box-shadow($init){
+  -webkit-box-shadow: $init;
+  -moz-box-shadow: $init    ;
+  box-shadow: $init    ;
+}
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}

@@ -1,22 +1,13 @@
-<nav class="navbar navbar-default  border-radius-none navbar-fixed-top">
+<nav class="navbar navbar-default navbar-inverse border-radius-none navbar-fixed-top mg-none">
     <a class="navbar-brand" href="">Tang-QQ</a>
-    <div class="form-inline pull-right mg-t-sm">
-        <input class="form-control form-control-sm border-radius-max" type="text" placeholder="快捷入口">
-            <span class="icon icon-cogs btn btn-secondary-outline mg-l-lg"></span>
+    <div class="pull-right user-model" ng-init="hideJude=false" ng-click="hideJude= !hideJude">
+        <div class="user-title">
+            <span class="glyphicon glyphicon-user"></span>
+        </div>
     </div>
 </nav>
-<hr>
-<hr>
-<hr>
-<div ng-init="all=200"></div>
-<button ng-click="all=300">变成300</button>
-<button ng-click="all=500">变成500</button>
-<div class="content-box pd-sm">
-    {{page}}
-    <tqq-pagination ng-model="page" items-per-page="10" total-items="all" tqq-change="abcdd()" first-text="首页" previous-text="上一页" next-text="下一页" last-text="末页" size-class="pagination-sm"></tqq-pagination>
-    <!--<tqq-menu></tqq-menu>-->
-
+<div class="content-box">
+    <div ng-class="{menubg:hideJude}"></div>
+    <menu menu-data="menuData" is-hide="hideJude"></menu>
+    <div ui-view class="view pd-sm"></div>
 </div>
-<footer class=" text-lg-center pd-sm navbar-dark bg-inverse">
-    这里是底部
-</footer>

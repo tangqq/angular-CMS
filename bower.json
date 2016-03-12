@@ -25,6 +25,7 @@
   "dependencies": {
     "bootstrap": "~3.3.6",
     "angular-ui-router": "ui-router#~0.2.18",
-    "angular": "~1.5.0"
+    "angular": "~1.5.0",
+    "tqqUi-angular-pagination": "https://github.com/tangqq/tqqUi-angular-pagination.git"
   }
 }

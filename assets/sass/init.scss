@@ -1,4 +1,7 @@
 @import "mixin/variate";
+html,body{
+  height:100%;
+}
 /*padding格式化*/
 .pd-none{padding:0!important;}.pd-xs{padding:5px!important;}.pd-sm{padding:10px!important;}.pd-md{padding:15px!important;}.pd-lg{padding:20px!important;}
 .pd-l-none{padding-left:0!important;}.pd-l-xs{padding-left:5px!important;}.pd-l-sm{padding-left:10px!important;}.pd-l-md{padding-left:15px!important;}.pd-l-lg{padding-left:20px!important;}
@@ -52,7 +55,6 @@
 .text-size-llg{
   font-size:35px;
 }
-.content-box{
-  min-height:600px;
-  margin-top:54px;
+.height-all{
+  height:100%;
 }

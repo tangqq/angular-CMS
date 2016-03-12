@@ -1,4 +1,7 @@
 @charset "UTF-8";
+html, body {
+  height: 100%; }
+
 /*padding格式化*/
 .pd-none {
   padding: 0 !important; }
@@ -281,6 +284,5 @@
 .text-size-llg {
   font-size: 35px; }
 
-.content-box {
-  min-height: 600px;
-  margin-top: 54px; }
+.height-all {
+  height: 100%; }

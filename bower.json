@@ -1,0 +1,31 @@
+{
+  "name": "angular-cms",
+  "description": "基于bootstrap和angular1搭建的CMS信息管理系统",
+  "main": "index.js",
+  "authors": [
+    "tangqq"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "bootstrap",
+    "cms",
+    "angular",
+    "ui-router",
+    "后台管理"
+  ],
+  "homepage": "https://github.com/tangqq/angular-CMS",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular-ui-router": "ui-router#~0.2.18",
+    "angular": "~1.5.0",
+    "tqqUi-angular-pagination": "https://github.com/tangqq/tqqUi-angular-pagination.git"
+  }
+}

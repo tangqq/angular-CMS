@@ -1,3 +1,4 @@
+<aside>
 <nav class="navbar navbar-default navbar-inverse border-radius-none navbar-fixed-top mg-none">
     <a class="navbar-brand" href="">Tang-QQ</a>
     <div class="pull-right user-model" ng-init="hideJude=false" ng-click="hideJude= !hideJude">
@@ -6,8 +7,9 @@
         </div>
     </div>
 </nav>
-<div class="content-box">
+</aside>
+<article class="content-box">
     <div ng-class="{menubg:hideJude}"></div>
     <menu menu-data="menuData" is-hide="hideJude"></menu>
     <div ui-view class="view pd-sm"></div>
-</div>
+</article>

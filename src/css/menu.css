@@ -40,12 +40,8 @@
         left: 0; } }
 
 .sidebar-menu {
-  background: #222222;
   width: 100%;
-  color: #666666;
-  font-weight: 700;
-  text-align: center;
-  border-bottom: thin solid #e5e5e5; }
+  font-weight: 700; }
   .sidebar-menu a {
     text-decoration: none;
     cursor: pointer;
@@ -59,9 +55,9 @@
     display: block;
     height: 40px;
     line-height: 38px;
-    -webkit-box-shadow: -1px -5px 5px #000000;
-    -moz-box-shadow: -1px -5px 5px #000000;
-    box-shadow: -1px -5px 5px #000000;
+    -webkit-box-shadow: -1px -2px 5px #000000;
+    -moz-box-shadow: -1px -2px 5px #000000;
+    box-shadow: -1px -2px 5px #000000;
     position: relative;
     padding-left: 10px;
     color: #909090;
@@ -69,7 +65,7 @@
     .sidebar-menu .menu-first span i {
       padding-right: 10px; }
     .sidebar-menu .menu-first:hover, .sidebar-menu .menu-first:active {
-      color: #666666; }
+      /*       color:$gray-darker-ecl; */ }
     .sidebar-menu .menu-first.active {
       color: #eee; }
       .sidebar-menu .menu-first.active:before {
@@ -98,7 +94,8 @@
     transition: all .5s;
     font-weight: 200;
     background: #666666;
-    text-align: left; }
+    text-align: left;
+    font-weight: 500; }
     .sidebar-menu .menu-second > li:last-of-type {
       margin-bottom: 10px; }
     .sidebar-menu .menu-second > li a {
@@ -121,7 +118,9 @@
       .sidebar-menu .menu-second > li a span {
         padding-left: 5px; }
       .sidebar-menu .menu-second > li a:active, .sidebar-menu .menu-second > li a:hover {
-        padding-left: 30px; }
+        padding-left: 30px;
+        color: #666666;
+        background: #f4f4f4; }
       .sidebar-menu .menu-second > li a.active {
         /* &:before{
              content:'';
@@ -136,7 +135,7 @@
           content: '';
           height: 0;
           width: 0;
-          border-top: 13px solid transparent;
+          border-top: 15px solid transparent;
           border-bottom: 13px solid transparent;
           border-left: 13px solid transparent;
           border-right: 13px solid #ffffff;

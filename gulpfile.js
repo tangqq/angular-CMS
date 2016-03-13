@@ -8,7 +8,14 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     minifycss = require('gulp-minify-css'),
+    sourcemaps = require('gulp-sourcemaps'),
     stripDebug = require('gulp-strip-debug');
+
+
+//帮助
+gulp.task('help',function(){
+
+})
 //生产环境输出
 gulp.task('production',['sass-min','angular-min']);
 
@@ -24,17 +31,21 @@ gulp.task('watch-sass',function(){
 //sass编译，普通版（未压缩）
 gulp.task('sass',function(){
     gulp.src('./assets/sass/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./src/css'))
         .pipe(concat('tqqStyle.css'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist'))
 })
 //sass编译，压缩版
 gulp.task('sass-min',function(){
     gulp.src('./assets/sass/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./src/css'))
         .pipe(concat('tqqStyle.min.css'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist'))
         .pipe(minifycss())
 })

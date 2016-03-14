@@ -41,10 +41,15 @@ gulp.task('watch-sass',function(){
 })
 
 gulp.task('r',function(){
+    gulp.watch('./resume_assets/css/*.scss',function(evt){
+        console.log(evt)
     gulp.src('./resume_assets/css/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('tqqStyle.css'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./resume_assets/css'))
+    })
 })
 gulp.task('min',function(){
     gulp.src([

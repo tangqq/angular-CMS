@@ -4,11 +4,11 @@
  var app = angular.module('myApp',['ui.router','tqq.ui','ui.directives']);
   app.config(function($stateProvider,$urlRouterProvider,routerData,stateInitProvider){
     $urlRouterProvider.otherwise('/404');
-    $urlRouterProvider.when('','/admin/branch');
+    $urlRouterProvider.when('','/login');
     $urlRouterProvider.when('/','/admin/branch');
       //将config.js里面的routerData转换成路由块，转换规则请看config.js里的注释
       angular.forEach(routerData.stateArr,function(data){
-           $stateProvider.state(stateInitProvider.nameInit(data.name),stateInitProvider.objInit(data,routerData.baseUrl));
+            $stateProvider.state(stateInitProvider.nameInit(data.name),stateInitProvider.objInit(data,routerData.baseUrl));
       })
 
  $stateProvider     //也可以自己写路由块

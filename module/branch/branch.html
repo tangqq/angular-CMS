@@ -1,0 +1,10 @@
+<section class="panel">
+    <div class="panel-heading border-bottomm">列表管理</div>
+    <div class="panel-body">
+        <div ecl-filter="filterData" filter-title="筛选:" ng-model="abc"></div>
+        {{abc}}
+     <table-list table-data="listData" table-title="title"></table-list>
+        {{bcd}}
+        <tqq-pagination ng-model="bcd" total-items="60" items-per-page="10" max-size="5" tqq-change="updateData()"></tqq-pagination>
+    </div>
+</section>

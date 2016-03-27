@@ -31,11 +31,11 @@ gulp.task('p',['sass-min','angular-min','min']);
 gulp.task('default',['watch-angular','watch-sass']);
 //监视编译angular
 gulp.task('watch-angular',function(){
-     gulp.watch(['./assets/js/*.js','./assets/js/*/*.js'],['angular'])
+     gulp.watch(['./assets/js/*.js','./assets/js/*/*.js','./module/*/*.js'],['angular'])
 })
 //监视sass
 gulp.task('watch-sass',function(){
-    gulp.watch(['./assets/sass/*.scss','./assets/sass/mixin/*.scss'],['sass']);
+    gulp.watch(['./assets/sass/*.scss','./assets/sass/mixin/*.scss','./module/*/*.scss'],['sass']);
 })
 
 gulp.task('min',function(){
@@ -57,7 +57,7 @@ gulp.task('min',function(){
 })
 //sass编译，普通版（未压缩）
 gulp.task('sass',function(){
-    gulp.src('./assets/sass/*.scss')
+    gulp.src(['./assets/sass/*.scss','./module/*/*.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./src/css'))
@@ -67,7 +67,7 @@ gulp.task('sass',function(){
 })
 //sass编译，压缩版
 gulp.task('sass-min',function(){
-    gulp.src('./assets/sass/*.scss')
+    gulp.src(['./assets/sass/*.scss','./module/*/*.scss','./module/*.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./src/css'))
         .pipe(concat('tqqStyle.min.css'))
@@ -76,14 +76,14 @@ gulp.task('sass-min',function(){
 })
 //angular 编译-合并
 gulp.task('angular',function(){
-    gulp.src(['./assets/js/*.js','./assets/js/*/*.js'])
+    gulp.src(['./assets/js/*.js','./assets/js/*/*.js','./module/*/*.js'])
         .pipe(ngAnnotate())
         .pipe(concat('my.js'))
         .pipe(gulp.dest('./dist'))
 })
 //angular 编译合并压缩
 gulp.task('angular-min',function(){
-    gulp.src(['./assets/js/*.js','./assets/js/*/*.js'])
+    gulp.src(['./assets/js/*.js','./assets/js/*/*.js','./module/*/*.js'])
         .pipe(ngAnnotate())
         .pipe(ngMin({dynamic:false}))
         .pipe(stripDebug())  //console

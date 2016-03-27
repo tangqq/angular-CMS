@@ -1,0 +1,33 @@
+.content-box {
+  padding-top: 51px;
+  height: 100%; }
+
+.user-model {
+  margin-right: 10px;
+  margin-top: 5px; }
+
+.user-title {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  background: #fff;
+  border: thin solid #fff;
+  text-align: center;
+  padding: 5px 0;
+  height: 40px;
+  width: 40px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px; }
+  .user-title:hover {
+    background: #888;
+    color: #fff; }
+  .user-title span {
+    font-size: 25px; }
+
+.view {
+  float: left;
+  width: 85%;
+  height: 100%; }

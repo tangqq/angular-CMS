@@ -10,7 +10,7 @@
 *   url:ui-router定义的路由模块的名称，用作ui-sref的值；
 * */
 app.constant('menuData',[
-    {first:{icon:'glyphicon glyphicon-home', name:'店面管理', url:null,},
+     {first:{icon:'glyphicon glyphicon-home', name:'店面管理', url:null,},
         second:[
                 {icon:'glyphicon glyphicon-list',name:'列表',url:'admin.branch'},
                 {icon:'glyphicon glyphicon-plus',name:'添加',url:'admin.branchAdd'},
@@ -38,9 +38,10 @@ app.constant('menuData',[
  templateUrl:'./view/branch/branchShow.html',
  controller:'AdminBranchShowController})
 * */
-app.constant('routerData', {baseUrl:'./view',
+app.constant('routerData', {baseUrl:'./module',
     stateArr:[
-    {name:'admin',viewUrl:'/'},
+    {name:'admin',viewUrl:'/common/'},
+    {name:'login',viewUrl:'/login/'},
     {name:'admin.branch',viewUrl:'/branch/'},
     {name:'admin.branchShow/:id',viewUrl:'/branch/'},
     {name:'admin.branchAdd',viewUrl:'/branch/'},

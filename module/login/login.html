@@ -1,0 +1,26 @@
+<div class="login-box">
+    <div class="row mg-none">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <section class="panel panel-default">
+                <header class="panel-heading">LOGIN</header>
+                <div class="panel-body">
+                    <form ng-submit="login()">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                                <input type="text" class="form-control" placeholder="user name" ng-model="data.userName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></div>
+                                <input type="password" class="form-control" placeholder="password" ng-model="data.password">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-block" ui-sref="admin.branch">submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

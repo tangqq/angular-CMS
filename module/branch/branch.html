@@ -3,7 +3,7 @@
     <div class="panel-body">
         <div ecl-filter="filterData" filter-title="筛选:" ng-model="abc"></div>
         {{abc}}
-     <table-list table-data="listData" table-title="title"></table-list>
+     <table-list table-data="listData" table-title="title" td-click="abcd()"></table-list>
         {{bcd}}
         <tqq-pagination ng-model="bcd" total-items="60" items-per-page="10" max-size="5" tqq-change="updateData()"></tqq-pagination>
     </div>

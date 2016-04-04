@@ -71,20 +71,32 @@ angular.module('ui.directives',[])
      return {
         restrict : 'EA',
         replace:true,
-        scope:{
+         scope:true,
+       /* scope:{
             tableData:'=',
             tdClick:'&',
             tableTitle:'=',
             checkbox:'='
-        },
+        },*/
+         link:function(scope,ele,atrs){
+             scope.tqqqqqq='1231223'
+             scope.tableData=scope[atrs.tableData]
+             console.log(scope.tableData)
+             console.log(scope)
+             console.log(atrs)
+             scope.abc=function(){
+                //scope.tdClick({ads:123})
+             };
+         },
         controller:function($scope){
-            this.thisClick= $scope.tdClick();
+            console.log($scope)
+            //this.thisClick= $scope.tdClick();
         },
         template:'<div class="table-responsive"> ' +
         '<table class="table table-hover text-center"> ' +
         '<thead> ' +
         '<tr> ' +
-        '<th ng-repeat="data in tableTitle track by $index" ng-if="data.init" class="text-center">{{data.name}}</th> ' +
+        '<th ng-click="abc(123)" ng-repeat="data in tableTitle track by $index" ng-if="data.init" class="text-center">{{data.name}}</th> ' +
         '</tr> ' +
         '</thead> ' +
         '<tbody> ' +

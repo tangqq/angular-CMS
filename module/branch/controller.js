@@ -20,6 +20,11 @@ app.controller('AdminBranchController',function($scope){
         {name:'电话',init:true,show:true,field:'phone'},
         {name:'性别',init:true,show:true,field:'sex'},
     ]
+    console.log('这里是控制器的$scope')
+    console.log($scope)
+    $scope.abcd=function(){
+        console.log(arguments)
+    }
 });
 app.controller('AdminBranchShowController',function($scope){
 

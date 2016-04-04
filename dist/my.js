@@ -146,20 +146,32 @@ angular.module('ui.directives',[])
      return {
         restrict : 'EA',
         replace:true,
-        scope:{
+         scope:true,
+       /* scope:{
             tableData:'=',
             tdClick:'&',
             tableTitle:'=',
             checkbox:'='
-        },
+        },*/
+         link:function(scope,ele,atrs){
+             scope.tqqqqqq='1231223'
+             scope.tableData=scope[atrs.tableData]
+             console.log(scope.tableData)
+             console.log(scope)
+             console.log(atrs)
+             scope.abc=function(){
+                //scope.tdClick({ads:123})
+             };
+         },
         controller:["$scope", function($scope){
-            this.thisClick= $scope.tdClick();
+            console.log($scope)
+            //this.thisClick= $scope.tdClick();
         }],
         template:'<div class="table-responsive"> ' +
         '<table class="table table-hover text-center"> ' +
         '<thead> ' +
         '<tr> ' +
-        '<th ng-repeat="data in tableTitle track by $index" ng-if="data.init" class="text-center">{{data.name}}</th> ' +
+        '<th ng-click="abc(123)" ng-repeat="data in tableTitle track by $index" ng-if="data.init" class="text-center">{{data.name}}</th> ' +
         '</tr> ' +
         '</thead> ' +
         '<tbody> ' +
@@ -318,11 +330,9 @@ app.provider('stateInit',function(){
                 _obj.abstract = true;
             }
             _obj.url =  '/' + _level[_len-1];
-
             _obj.controller = this.ctrlInit(obj.name);
             _obj.templateUrl = baseUrl +obj.viewUrl + _level[_len-1]+'.html'
         }
-         console.log(_obj)
         return _obj;
     }
     this.$get=function(){
@@ -351,6 +361,11 @@ app.controller('AdminBranchController',["$scope", function($scope){
         {name:'电话',init:true,show:true,field:'phone'},
         {name:'性别',init:true,show:true,field:'sex'},
     ]
+    console.log('这里是控制器的$scope')
+    console.log($scope)
+    $scope.abcd=function(){
+        console.log(arguments)
+    }
 }]);
 app.controller('AdminBranchShowController',["$scope", function($scope){
 

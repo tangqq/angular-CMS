@@ -33,13 +33,11 @@ app.provider('stateInit',function(){
         }else{
             if(_level[0]==='admin'){
                 _obj.abstract = true;
-            }
+            };
             _obj.url =  '/' + _level[_len-1];
-
             _obj.controller = this.ctrlInit(obj.name);
             _obj.templateUrl = baseUrl +obj.viewUrl + _level[_len-1]+'.html'
         }
-         console.log(_obj)
         return _obj;
     }
     this.$get=function(){

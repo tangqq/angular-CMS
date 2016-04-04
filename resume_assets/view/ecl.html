@@ -18,38 +18,30 @@
             <a href="https://github.com/tangqq/angular-CMS">未完成的cms系统基础构架</a></div>
     </section>
     <section class="pd-sm">
-     <!--   <h2 class="body-title">项目总结</h2>
+        <h2 class="body-title">项目总结</h2>
         <div class="pd-xs border-top">
-            <h3>cms管理系统</h3>
-            <p class="pd-l-lg">两套差不多的管理后台</p>
-            <h4>跟以前做的一样，不同的是angular我一个人搭环境，一个人爬坑</h4>
-            <div>难点总结</div>
-            <table class="table table-striped bg-warning">
-                <thead>
-                <tr>
-                    <th>难点</th>
-                    <th>解决方法</th>
-                    <th>评价</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>跨域</td>
-                        <td>用的是cors方法解决的，在服务端的请求头加上应许访问接口的站点白名单</td>
-                        <td>优点是前端不用加什么代码，支持post请求，而jsonp不支持post；缺点是不兼容低端浏览器。</td>
-                    </tr>
-                    <tr>
-                        <td>post请求后端介绍不到数据</td>
-                        <td>最终是把请求的contentType设置成application/x-www-form-urlencoded;charset=utf-8</td>
-                        <td>最终还是解决啦，以后遇到同样的问题不用爬坑啦。</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>-->
+           <p class="text-sj">
+               同样的cms后台管理系统，同样的bootstrap+angular，项目本身没有什么说的，cms管理系统都是差不多，各个模块的列表，添加，删除，编辑，统计这样的。就说说我
+               在项目架构的一些小想法；
+               <p class="text-sj">在开始，由于需要一版过渡版，总的也就只有六个大模块，开发人员也只是我一个，所有时间有点紧，css用的预编译语言是less，用啦gulp做自动话，直接将less转换并压缩出一个.min.css，也没合并未压缩版本。而angular的所有方法全写在一个js里，不管是controller,router,还是service,directive，view模版就直接放在一个view文件夹里。花啦近一个月完成这个版本之后，第二个版本重新架构。</p>
+                <p class="text-sj">第二个版本开始构架，思路基本是把同类文件放一个文件夹，在按功能进行细分，view视图模块里按照的是视图性质分的，属于一级路由的模块的列表页和最外层的公共页放在一个文件夹，属于二级路由的或者说是子路由的，比如，详情页，添加页，编辑页类似的放在一个文件夹，模态框的放在一个文件夹；css改用啦sass，分别有common公共样式，list列表样式，form样式和各个模块的详情样式。js文件有app入口文件，router路由即配置文件，filter自定义过滤器文件，service自定义方法文件，directive指令文件和controller控制器文件;controller文件则根据功能模块分为不同的文件。 </p>
+                <p class="text-sj">第二个版本的架构在多人开发上不会产生太大的不便，结构也清楚，开发过程中不容易产生冲突。可是开发时间长啦之后，当你同时不同功能模块之间来回修改，发现文件目录结构虽然清楚，但view文件和sass文件和js文件是在三个不同的文件夹，找的时候非常不便，于是我打算在改进这种结构。</p>
+                <p class="text-sj">我将这个架构再进行改进，自己用一个model文件夹放大部分代码。用一个assets放静态文件和公共代码，如图片，视频等静态资源。js方面的directive和router放在assets文件夹下面，因为后期可以直接将directive抽离项目成为独立的指令库，这个文件也是公用的，只要一个人维护就好，model里的结构又按照功能模块切割，每个模块文件夹下面放与这个模块相关的东西，不管是view还是sass还是js,js还可以根据不同的作用区分成几个文件。这样可以最大程度的避免多人开发遇到的冲突问题，同时几个人开发都不会用问题。由于最后都会用gulp将分散的sass和js合并打包，所有并不需要担心文件归类杂乱的问题。</p>
+            <p class="text-sj">以上纯属个人根据自己开发过程中慢慢整理的符合自己的一种方式，并不存在什么模式。只为更方便快捷的开发。让项目更一目了然。</p>
+           </p>
+
+        </div>
     </section>
 <section class="pd-sm">
-    <h2 class="body-title">最后总结</h2>
-    <div class="text-sj">未完待续...</div>
+    <h2 class="body-title">学习总结</h2>
+    <div >
+        <p class="text-sj">在工作期间不断学习，其中看啦《angular权威指南》，对angular理解更好，做出啦一些反正以前无法完成的产品需求。如，应用里在controller里的操作要保存。因为angular的controller在路由切换时就回销毁，所以以前一直认为这就应该这样，不然我在一个页面看数据翻页到啦第5页，切换到啦别的路由，在回来就会回到第1页。还有表单填写也是一样的。路由切换就会清空当前操作的数据，解决方法也很简单，直接将操作的数据用service保存起来就好。这也延伸出下个需求，需求做成浏览器标签那样的多标签切换窗口。刚刚开始完全找不到思路，后来一想，其实可以做一个伪的，也就是你看上去他是多窗口切换，实际上他就是路由切换，当你的controller里的数据会保存操作之后，你只要监视路由变化，将访问的路由放在一个数组里重新构建一个类似与浏览记录一样的小tab导航栏就差不多啦。</p>
+        <p class="text-sj">开发过程中也遇到过一个问题，就是用的第三方组件，angular-ui-bootstrap的分页组件，每次初始组件都会初始当前页为1，这样跟需求不符合。我就尝试啦自己写啦一个。
+            <a href="https://github.com/tangqq/tqqUi-angular-pagination" target="_blank">github地址</a>，从此我也喜欢上直接写指令，大多数的公用指令都直接写，虽然有现场的插件可以用，不过自己写的自定义度会更高，虽然重用性不是很好。现在写啦一个table指令，只要传入数组，就直接循环出表格。减少啦千篇一律的列表页的复制粘贴。另外还在github上做啦一个
+            <a href="https://github.com/tangqq/angular-CMS" target="_blank">angualr路由小案例</a>，适合当项目基本，还未布置完成。</p>
+        <p class="text-sj">空闲时间也在看《javascript权威指南》，不愧是圣经，尤其是以前很容易忽略的很多基础知识，有了更生的了解。</p>
+        <p><a href="https://github.com/tangqq/tqqUi-angular-pagination" target="_blank">angular-pagination分页插件</a>和<a href="https://github.com/tangqq/angular-CMS" target="_blank">angular-cms</a></p>
+    </div>
 </section>
 </body>
 </html>

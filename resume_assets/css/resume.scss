@@ -1,6 +1,6 @@
 //变量定义
 $bg-color: #e7ecff;
-$body-text-color:#7f8c97;
+$body-text-color: #2d3135;
 $title-color:#303e49;
 $icon-color:#fff;
 /* --------------------------------
@@ -94,9 +94,12 @@ Modules - reusable parts of our design
 -------------------------------- */
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-  width: 90%;
+   width: 90%;
   max-width: 1170px;
   margin: 0 auto;
+  @media only screen and (min-width:768px){
+    width:97%;
+  }
   &::after{
     content: '';
     display: table;
@@ -161,6 +164,7 @@ Main components
 .phone{
   >.cd-timeline-img{
     .img{
+      float:left;
       width:100%;
       height:100%;
       display: block;
@@ -173,23 +177,32 @@ Main components
     z-index:20;
     width:100px;
     height:100px;
-    margin-left:-30px;
+    margin-left:0px;
     box-shadow: 0 0 0 6px $bg-color;
+    -webkit-transform: translate3d(-10px,-10px,0);
+    -moz-transform: translate3d(-10px,-10px,0);
+    -ms-transform: translate3d(-10px,-10px,0);
+    -o-transform: translate3d(-10px,-10px,0);
+    transform: translate3d(-10px,-10px,0);
     @media only screen and (min-width: 768px){
       width:150px;
       z-index:20;
       height:150px;
       margin-left:-75px;
       box-shadow: 0 0 0 6px $bg-color;
+      -webkit-transform: translate3d(0,0,0);
+      -moz-transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+      -o-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
     }
   };
 
   .cd-timeline-init{
-    padding:.8rem;
     background:white;
     //width:100%;
-    margin-left:30px;
-    padding-left:60px;
+    margin-left:0px;
+    padding:.8rem .8rem .8rem 100px;
     border-radius: 0.25em;
     &.left{
       border-bottom-left-radius: 0;
@@ -199,6 +212,7 @@ Main components
     &.right{
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      padding-left:.8rem;
       padding-top:0;
     }
   p{
@@ -422,18 +436,142 @@ header{
     height:100%;
   padding:5px;
 font-size:15px;
+  min-height:150px;
   text-indent:2em;
-  color:#fff;
+  text-align: right;
+  color: #5d4f12;
   @media only screen and (min-width: 768px)  {
     font-size:25px;
-    padding:30px;
+    padding:10px;
   }
-  text-shadow: #000 0 1px 0;
-  background: -webkit-linear-gradient(left top, #859DD0  20%, #C5D4DD 45%, #5187C5);  /* Safari 5.1 - 6.0 */
-  background: -o-linear-gradient(bottom right,  #859DD0  20%, #C5D4DD 45%,#5187C5 ); /* Opera 11.1 - 12.0 */
-  background: -moz-linear-gradient(bottom right,  #859DD0  20%, #C5D4DD 45%,#5187C5 ); /* Firefox 3.6 - 15 */
-  background: linear-gradient(to bottom right,  #859DD0  20%, #C5D4DD 45%,#5187C5 );
+  text-shadow: #ffffff 0 1px 0;
+  &.homepage{
+    position: relative;
+    background-image: url(../img/thisImg/title2.jpg);
+  }
+  &.glh{
+    background-image: url(../img/thisImg/glh.jpg);
+    color:#fff;
+    text-shadow: #000 0 1px 0;
+  }
+  &.quanzikeji{
+    background-image: url(../img/thisImg/quanzikeji.jpg);
+    color:#fff;
+    text-shadow: #000 0 1px 0;
+  }
+  &.ecl{
+    background-image: url(../img/thisImg/ecl.jpg);
+    color:#fff;
+    text-shadow: #000 0 1px 0;
+    background-position: top right;
+  }
+  background-size:cover ;
+  background-position: center center;
+  background-color:rgba(255,255,255,.5);
+  background-repeat: no-repeat;
+  //background: -webkit-linear-gradient(left top, #859DD0  20%, #C5D4DD 45%, #5187C5);  /* Safari 5.1 - 6.0 */
+  //background: -o-linear-gradient(bottom right,  #859DD0  20%, #C5D4DD 45%,#5187C5 ); /* Opera 11.1 - 12.0 */
+  //background: -moz-linear-gradient(bottom right,  #859DD0  20%, #C5D4DD 45%,#5187C5 ); /* Firefox 3.6 - 15 */
+  //background: linear-gradient(to bottom right,  #859DD0  20%, #C5D4DD 45%,#5187C5 );
+}
+.download{
+  padding:10px;
+  background: #6463ff;
+  color:#fff;
+  border:none;
+  border-radius: 20px;
+  position: absolute;
+  bottom:-10px;
+  right:10px;
+  cursor: pointer;
+  text-decoration:none;
+  outline:none;
+  box-shadow: 0 2px 0 2px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  &:hover{
+    background: #5352d0;
+  }
+  &:active,.active{
+    background: #3a3981;
+    box-shadow: 0 0px 0 1px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  }
 }
 .text-sj{
   text-indent:2em;
+}
+.body-title{
+  background: #fff;
+  padding:5px 10px;
+}
+.zhu{
+  border:thin solid red;
+  padding:10px;
+}
+.body-text{
+  background: rgba(255,255,255,.6);
+  padding:5px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+  &::after,&::before{
+    content:'';
+    display: table;
+    clear:both;
+  }
+}
+.two-back{
+
+  background-image: url(../img/thisImg/twoback.jpg);
+  background-size:auto 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.one-back{
+
+  background-image: url(../img/thisImg/lushang.gif);
+  background-size:auto 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.three-back{
+
+  background-image: url(../img/thisImg/threeback.jpg);
+   background-size:auto 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.four-back{
+  background-image: url(../img/thisImg/fourback.jpg);
+  background-size:auto 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+.fove-back{
+  background-image: url(../img/thisImg/foveback.jpg);
+  background-size:auto 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+.six-back{
+  background-image: url(../img/thisImg/6.jpg);
+  background-size:auto 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.seven-back{
+  background-image: url(../img/thisImg/7.jpg);
+  background-size:auto 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.eight-back{
+  background-image: url(../img/thisImg/8.jpg);
+  background-size:auto 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.nine-back{
+   background-image: url(../img/thisImg/9.jpg);
+  background-size:auto 100%;
+  background-position: bottom left;
+  background-repeat: no-repeat;
 }

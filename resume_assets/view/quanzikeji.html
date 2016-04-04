@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body id="glh">
-    <header>
-        这是我北京的第一站，虽然只待啦短短的3个月，但是对应我的提示是巨大的。
+    <header class="quanzikeji">
+        ——北京的第一站，巨大的提升！
     </header>
     <section class="pd-sm">
-        <h1>前言</h1>
+        <h2 class="body-title">前言</h2>
         <div class="pd-xs border-top text-sj">在公司做的是两套管理后台，一套是公司内部使用的，一套是第三方使用的。由于我做过啦好几个管理后台的项目，而且我去的时候他们的css页面基本成型，就是要找一个会angular的人去写数据逻辑，我也轻松的胜任啦。</div>
     </section>
     <section class="pd-sm">
-        <h1>项目总结</h1>
+        <h2 class="body-title">项目总结</h2>
         <div class="pd-xs border-top">
             <h3>cms管理系统</h3>
             <p class="pd-l-lg">两套差不多的管理后台</p>
@@ -47,8 +47,12 @@
         </div>
     </section>
 <section class="pd-sm">
-    <h1>最后总结</h1>
-    <div class="text-sj">在这三个月，我真正对原生js的面对对象理解啦，瞬间js变得开明，一起都是以对象为起点。原始对象Object,String,Array,Function,每个对象有不同的api,客户端的宿主对象，window,location,history,element,document等等，需要的就是不断熟悉这些api，多看文档，只是对与原型继承虽然了解，但是由于工作中都是用的框架，所以没有手写继承链的经验，也不能很好的应用出来。我对angular的理解有啦很大的提升，不想以前一样只为实现功能，什么都往controller里写，而是用service把一些公共的方法进行重用封装，也尝试写一些简单指令</div>
+    <h2 class="body-title">最后总结</h2>
+    <div class=" zhu">
+        <p class="text-sj">在这三个月，我大部分时间都是学习元素的js,慕课网的《javascript深入浅出》课程重复看啦三遍，尤其是解释OOP和this的章节，我真正对原生js的面对对象理解啦，瞬间js变得开明，一切都是以对象为起点。原始对象Object,String,Array,Function,每个对象有不同的api,客户端的宿主对象，window,location,history,element,document等等，需要的就是不断熟悉这些api，多看文档，只是对与原型继承虽然了解，但是由于工作中都是用的框架，所以没有手写继承链的经验，也不能很好的应用出来。也深入的了解啦angular，慕课网的《angular实战也看了一遍》在结合项目中的应用，对angular的理解有啦很大的提升，不想以前一样只为实现功能，什么都往controller里写，而是用service把一些公共的方法进行重用封装，也尝试写一些简单指令；</p>
+        <p class="text-sj">而对于项目的架构，由于只有两个人开发，说有的view视图模块都放在一个文件下，js放在一个文件下，有一个app.js配置项目的初始化，路由配置以及一下常量的定义，然后每个人有一个controller文件专门写控制器，另外有一个文件写filter,directive,service等等公共的东西，这样的架构很多，当项目的类容模块慢慢增多，controller里会越写越多，不易维护，模块话不清楚。不过在小项目里这样写不用来回切换controller文件，只要在一个controller里面搜索一下就能找到对应控制器。</p>
+    </div>
+
 </section>
 </body>
 </html>

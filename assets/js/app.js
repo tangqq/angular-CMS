@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2016/2/27.
  */
- var app = angular.module('myApp',['ui.router','tqq.ui','ui.directives']);
+ var app = angular.module('myApp',['ui.router','tqq.ui','ui.directives','ui.service']);
   app.config(function($stateProvider,$urlRouterProvider,routerData,stateInitProvider){
     $urlRouterProvider.otherwise('/404');
     $urlRouterProvider.when('','/login');

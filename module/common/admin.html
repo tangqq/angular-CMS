@@ -1,15 +1,18 @@
-<aside>
+
 <nav class="navbar navbar-default navbar-inverse border-radius-none navbar-fixed-top mg-none">
-    <a class="navbar-brand" href="">Tang-QQ</a>
-    <div class="pull-right user-model" ng-init="hideJude=false" ng-click="hideJude= !hideJude">
-        <div class="user-title">
+    <i class="glyphicon glyphicon-list menu-ctrl"  ng-init="hideJude=false" ng-click="hideJude= !hideJude"></i><a class="navbar-brand" href="">Tang-QQ</a>
+    <div class="pull-right user-model">
+        <a href class="user-title" ng-init="userShow=false" ng-click="userShow=!userShow">
             <span class="glyphicon glyphicon-user"></span>
+        </a>
+        <div class="user-body " ng-if="userShow">
+            <a href class="list-group-item pd-xs">退出登录</a>
         </div>
     </div>
 </nav>
 </aside>
 <article class="content-box">
-    <div ng-class="{menubg:hideJude}"></div>
+    <div ng-class="{menubg:hideJude}" ng-click="hideJude=false"></div>
     <menu menu-data="menuData" is-hide="hideJude"></menu>
     <div ui-view class="view pd-sm"></div>
 </article>

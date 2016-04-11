@@ -1,15 +1,16 @@
 @import "../../assets/sass/mixin/variate";
  .content-box{
-    padding-top:51px;
+    padding-top:52px;
    height:100%;
   }
  .user-model{
    margin-right:10px;
    margin-top:5px;
- }
+ };
  .user-title{
     @include transition(all .2s);
    background: #fff;
+   display: block;
    border:thin solid #fff;
    text-align: center;
    padding:5px 0;
@@ -24,8 +25,24 @@
      font-size:25px;
    }
  }
+ .user-body{
+   position: absolute;
+   min-width:100px;
+   right:10px;
+  top:54px;
+
+ }
  .view{
+   position: relative;
    float:left;
    width:85%;
-   height:100%;
+   min-height:100%;
+   @media (max-width: 768px) {
+      width:100%;
+
+   }
+ }
+ .content-body{
+   border:thin solid #000;
+   @include border-radius(10px)
  }

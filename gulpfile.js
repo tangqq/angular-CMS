@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 
 //帮助
 gulp.task('help',function(){
-    console.log('	gulp -p	  文件生产环境压缩打包');
+    console.log('	gulp p	  文件生产环境压缩打包');
 
     console.log('	gulp			    文件变动监控打包');
 

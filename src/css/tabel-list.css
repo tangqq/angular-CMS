@@ -259,27 +259,11 @@ html, body {
 .border-radius-max {
   border-radius: 1000px !important; }
 
-.pull-right {
-  float: right; }
-
-.pull-left {
-  float: left; }
+.pointer {
+  cursor: pointer; }
 
 .mg-t-xxs {
   margin-top: 3px; }
-
-.icon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-style: normal;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased; }
-
-.text-lg-center {
-  text-align: center; }
 
 .text-size-llg {
   font-size: 35px; }
@@ -287,12 +271,11 @@ html, body {
 .height-all {
   height: 100%; }
 
-.chenckboxP {
+.checkedNo {
   position: relative; }
-  .chenckboxP:first-of-type a {
+  .checkedNo .checkCtrl {
     display: block;
-    position: absolute;
-    margin-top: -10px;
+    margin: 0 auto;
     width: 20px;
     height: 20px;
     border: 2px solid #337ab7;
@@ -300,19 +283,34 @@ html, body {
     -moz-border-radius: 100px;
     border-radius: 100px; }
 
-.chenckActive {
-  position: relative; }
-  .chenckActive:first-of-type a::after {
+.checkedYes .checkCtrl {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #337ab7;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px; }
+  .checkedYes .checkCtrl::after {
     content: '';
     display: block;
+    margin: 0 auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -6px;
-    margin-left: -6px;
+    top: 2px;
+    left: 2px;
     width: 12px;
     height: 12px;
     background: #337ab7;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px; }
+
+.table > tbody > tr > td {
+  vertical-align: middle; }
+
+.table-style-ecl thead > tr > th {
+  background: #909090;
+  color: #fff;
+  letter-spacing: 1px; }

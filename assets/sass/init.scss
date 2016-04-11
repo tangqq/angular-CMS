@@ -28,30 +28,13 @@
 .border-radius-max{
   border-radius: 1000px!important;
 }
-
-.pull-right{
-  float:right;
+.pointer{
+  cursor:pointer;
 };
-.pull-left{
-  float:left;
-}
 .mg-t-xxs{
    margin-top:3px;
 }
-.icon{
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  //font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-size:20px;
-  font-weight: 400;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-.text-lg-center{
-  text-align: center;
-}
+
 .text-size-llg{
   font-size:35px;
 }

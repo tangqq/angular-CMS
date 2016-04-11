@@ -1,37 +1,49 @@
 @import "init";
 $border-color:#337ab7;
-.chenckboxP{
+.checkedNo{
   position:relative;
-  &:first-of-type{
-    a{
+  .checkCtrl{
       display:block;
-      position:absolute;
-      //top:50%;
-      //left:50%;
-      margin-top:-10px;
+      margin:0 auto;
       width:20px;
       height:20px;
       border:2px solid $border-color;
       @include border-radius(100px);
     }
-  }
 }
-.chenckActive{
-  position:relative;
-  &:first-of-type{
-    a::after{
+.checkedYes{
+  .checkCtrl{
+    position: relative;
+    display:block;
+    margin:0 auto;
+    width:20px;
+    height:20px;
+    border:2px solid $border-color;
+    @include border-radius(100px);
+    &::after{
       content:'';
       display: block;
+      margin: 0 auto;
       position:absolute;
-      top:50%;
-      left:50%;
-      margin-top:-6px;
-      margin-left:-6px;
+      top:2px;
+      left:2px;
       width:12px;
       height:12px;
       //border:3px solid #0000cc;
       background: $border-color;
       @include border-radius(100px);
     }
+  }
+}
+.table{
+  >tbody>tr>td{
+    vertical-align: middle;
+  }
+}
+.table-style-ecl{
+  thead>tr>th{
+    background: $gray-dark-ecl;
+    color:#fff;
+    letter-spacing:1px;
   }
 }

@@ -8,13 +8,19 @@ body,html{
     font-size:0;
     text-align: center;
 }
-.menu span{
+.menu a{
+    cursor: pointer;
     font-size:18px;
     display: inline-block;
     padding:10px 20px;
     background: #deeeee;
-    color:#5e5e5e;
+     color:#5e5e5e;
     margin-left:1px;
+    text-decoration: none;
+}
+.menu a:hover{
+    background: #a0b0b0;
+    color:#fff;
 }
 .page{
     display: block;

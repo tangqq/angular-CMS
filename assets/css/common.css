@@ -1,0 +1,41 @@
+body,html{
+    padding:0;
+    margin:0;
+}
+.menu{
+    width:100%;
+    background: #5e5e5e;
+    font-size:0;
+    text-align: center;
+}
+.menu span{
+    font-size:18px;
+    display: inline-block;
+    padding:10px 20px;
+    background: #deeeee;
+    color:#5e5e5e;
+    margin-left:1px;
+}
+.page{
+    display: block;
+    width:100%;
+    height:400px;
+    line-height: 400px;
+    text-align: center;
+    font-size:30px;
+}
+.page-one{
+    background: #8eff34;
+    color: #fff
+}
+.page-two{
+    background: #62cfff;
+    color: #fff
+}
+.page-three{
+    background: #ff1f30;
+    color: #fff
+}
+.text-center{
+    text-align: center;
+}

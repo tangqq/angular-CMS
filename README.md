@@ -1,7 +1,20 @@
-angular-CMS后台管理系统
+angular-CMS-1.0
 ====================
-由于项目尚未完善，所有没有文档。
+
+基础的angular+ui-router项目搭建，配合gulp,最终合并angular的自己写的代码和css。
+
+安装使用
 ---------------------
 
- <a href="http://www.tangqq.cn/cms"  target="_blank">查看项目成品展示</a>
+打开项目根目录
+
+$ npm install
+
+$ bower install
+
+然后用虚拟机打开index.html
+
+建议直接用webstrom直接打开
+
+
 

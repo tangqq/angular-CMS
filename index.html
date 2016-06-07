@@ -2,16 +2,22 @@
 <html lang="zh-cn" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
-    <title>angular-cms系统</title>
+    <title>angular-1.0</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/production.min.css">
     <link rel="stylesheet" href="dist/tqqStyle.css">
 </head>
-<body class="container-fluid pd-none">
+<body>
+<div class="menu">
+    <span ui-sref="pageOne">跳到第一个页面</span>
+    <span ui-sref="pageTwo">跳到第二个页面</span>
+    <span ui-sref="pageThree">跳到第三个页面</span>
+</div>
 <div class="height-all" ui-view></div>
-<script src="dist/angular.min.js"></script>
- <script src="dist/my.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="dist/my.js"></script>
 </body>
 </html>

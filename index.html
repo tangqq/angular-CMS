@@ -2,16 +2,25 @@
 <html lang="zh-cn" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
-    <title>angular-cms系统</title>
+    <title>angular-2.0</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/production.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/tqqStyle.css">
 </head>
 <body class="container-fluid pd-none">
-<div class="height-all" ui-view></div>
-<script src="dist/angular.min.js"></script>
- <script src="dist/my.js"></script>
+<header>
+    这里是头模块，放点logo吧...
+    <div class="btn-group btn-group-sm pull-right" style="margin-top:23px;">
+        <button class="btn btn-info" ui-sref-active="active" ui-sref="common.pageOne">管理模块</button>
+        <button class="btn btn-danger" ui-sref-active="active" ui-sref="user.home">配置模块</button>
+    </div>
+</header>
+<div class="content-body" ui-view></div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="dist/my.js"></script>
 </body>
 </html>

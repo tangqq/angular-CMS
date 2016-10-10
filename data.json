@@ -1,0 +1,80 @@
+{"user":{
+  "name":"唐清清",
+  "sex":"男",
+  "nation":"汉族",
+  "address":"贵州、安顺",
+  "work":"两年半",
+  "height":"165cm",
+  "weight":"57kg",
+  "birthday":"1994、06、07"
+
+},
+  "list":
+  [
+    {"title":"2016,易车生活....",
+    "date":"2015-11-13",
+      "href":"resume_assets/view/ecl.html",
+      "content":"在这里是担任前端负责人，主要开发一个saas系统，是angular+bootstrap+gulp+sass的技术选择，这项目让我对angular的理解更上一层，以前是使用指令，现在是开发指令；更是在业务的理解上更透彻，更清晰。对大项目的版本控制也有一定的心得。",
+      "icon":"icon icon-user-tie",
+      "bgClass":"cd-picture",
+      "imgClass":"nine-back"
+    },
+    {"title":"2015,圈子科技...",
+      "date":"2015-08-27",
+      "href":"resume_assets/view/quanzikeji.html",
+      "content":"这是北京第一家公司，在这里，我把一个项目从无到有的开发出来。技术选择angular+bootstrap+gulp+lass；从环境搭建，到业务逻辑的实现；把我的学到的知识更加深入理解啦。",
+      "icon":"icon icon-address-book",
+      "bgClass":"cd-movie",
+      "imgClass":"eight-back"
+    },
+    {"title":"2014-8，北京，不一样的开始...",
+      "date":"2015-08-19",
+      "content":"2015年8月19号，我离开了教会我很多东西的公老虎，独自一人踏上北漂路，希望学到更多东西。",
+      "icon":"icon icon-airplane",
+      "bgClass":"cd-location",
+      "imgClass":"seven-back"
+    },
+    {"title":"2014，贵州公老虎...",
+      "date":"2014-08-20",
+      "href":"resume_assets/view/gonglaohu.html",
+      "content":"这是我的第一个互联网公司，是我的起点；在这里学习啦html/html5、css/css3、javascript；项目开发中使用的Bootstrap、Amaze、ionic、jquery、zepto等框架库等。还有一直使用的angular，这是我到后来都一直在用的框架；后来，前端都交给我，css的预处理LASS和SASS,自动化工具gulp，node的npm、bower等插件管理。项目的版本控制git等开发中用到的技术我也慢慢学会。期间还用啦react做啦一个项目，只是当时的react是测试版的，还有很多不足；在这里，我学到的东西比我想象中的还要多。",
+      "icon":"icon icon-compass",
+      "bgClass":"cd-picture",
+      "imgClass":"six-back"
+    },
+    {"title":"2014,重出江湖...",
+      "date":"2014-07-09",
+      "content":"2014年7月9日，从学校出来到学校安排的一个电子厂实习，但是完全用不到我们的专业知识；待了一个月，我决定不能这样下去，就回到老家。<br/>&#12288;&#12288;经由我一好朋友介绍去了我的第一个互联网公司，那时候本来是去面试ui的，可是去了以后cto怕我以前做的平面广告无法胜任ui设计，让我重新选一个岗位，我就选了前端，那时候我还不知道前端是啥，我认为前端就想ps一样用 Dreamweaver像做图一样的做网页，从此踏上啦我的前端之旅。",
+      "icon":"icon icon-pacman",
+      "bgClass":"cd-location",
+      "imgClass":"fove-back"
+    },
+    {"title":"2013,再战校园...",
+      "date":"2013-03-01",
+      "content":"去到学校，在一年半的时间里，凭借我对计算机的热爱和过人的学习能力，不知不觉学到啦很多东西。<br/>&#12288;&#12288;在13年5月获得贵州省职业技术院校技能大赛暨全国职业院校技能大赛选拔赛中职组数字影视后期制作二等奖，用的After Effects和Premiere Pro我接触不到两个月;<br/>&#12288;&#12288;在14年5月获得贵州省职业技术院校技能大赛暨全国职业院校技能大赛选拔赛中职组动漫项目第一名。用的3dmax，我学习了半年;<br/>&#12288;&#12288;本来15年我已经在实习啦，没在校，我们老师叫我去，获得15年中职组影视后期一等奖。",
+      "icon":"icon icon-office",
+      "bgClass":"cd-movie",
+      "imgClass":"four-back"
+    },
+    {"title":"2011,设计师...",
+      "date":"2011-09-15",
+      "content":"学习完之后，找啦一家广告公司做户外广告设计，一做就是两年；主要用photoshop进行排版和图片处理。后来，想学更多新东西，决定重新去学校！",
+      "icon":"icon icon-images",
+      "bgClass":"cd-location",
+      "imgClass":"three-back"
+    },
+    {"title":"2010,回来了...",
+      "date":"2010-12-11",
+      "content":"在外奔波两年，我回家啦；由于对计算机的喜爱，去培训班学习平面设计；",
+      "icon":"icon icon-office",
+      "bgClass":"cd-movie",
+      "imgClass":"two-back"
+    },
+    {"title":"2008,开始我的旅程...",
+      "date":"2008-08-21",
+      "content":"那年，我14岁，初中毕业，怀着对外面世界的渴望，去到一个里家乡一千多公里的地方，成为了一名打工仔...",
+      "icon":"icon icon-spoon-knife",
+      "bgClass":"cd-picture",
+      "imgClass":"one-back"
+    }
+  ]}

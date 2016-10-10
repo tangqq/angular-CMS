@@ -10,11 +10,11 @@
 </head>
 <body id="glh">
     <header class="ecl">
-      ——好同事，好项目！
+      ——继续学习！
     </header>
     <section class="pd-sm">
         <h2 class="body-title">前言</h2>
-        <div class="pd-xs border-top text-sj">公司是要做一个saas系统，还有包括微信平台，后期打算用react重构微信端，项目是非常好的，CTO也是很好的一个人，经验丰富，现在我angular注重组件指令话，已有github项目。<a href="https://github.com/tangqq/tqqUi-angular-pagination" target="_blank">仿ui-bootstrap的分页组件，不过根据自己的需求做啦一些改动。</a> 还有最近在整理工作共能抽离出来的组件和对cms系统的一些模块化项目开发和项目搭建的参考项目
+        <div class="pd-xs border-top text-sj">公司是要做一个saas系统，还有包括微信平台，后期打算用react重构微信端，项目是非常好的，CTO也是很好的一个人，经验丰富，现在我angular注重组件指令化，已有github项目。<a href="https://github.com/tangqq/tqqUi-angular-pagination" target="_blank">仿ui-bootstrap的分页组件，不过根据自己的需求做啦一些改动。</a> 还有最近在整理工作共能抽离出来的组件和对cms系统的一些模块化项目开发和项目搭建的参考项目
             <a href="https://github.com/tangqq/angular-CMS">未完成的cms系统基础构架</a></div>
     </section>
     <section class="pd-sm">
@@ -23,7 +23,7 @@
            <p class="text-sj">
                同样的cms后台管理系统，同样的bootstrap+angular，项目本身没有什么说的，cms管理系统都是差不多，各个模块的列表，添加，删除，编辑，统计这样的。就说说我
                在项目架构的一些小想法；
-               <p class="text-sj">在开始，由于需要一版过渡版，总的也就只有六个大模块，开发人员也只是我一个，所有时间有点紧，css用的预编译语言是less，用啦gulp做自动话，直接将less转换并压缩出一个.min.css，也没合并未压缩版本。而angular的所有方法全写在一个js里，不管是controller,router,还是service,directive，view模版就直接放在一个view文件夹里。花啦近一个月完成这个版本之后，第二个版本重新架构。</p>
+               <p class="text-sj">在开始，由于需要一版过渡版，总的也就只有六个大模块，开发人员也只是我一个，所有时间有点紧，css用的预编译语言是less，用啦gulp做自动化，直接将less转换并压缩出一个.min.css，也没合并未压缩版本。而angular的所有方法全写在一个js里，不管是controller,router,还是service,directive，view模版就直接放在一个view文件夹里。花了近一个月完成这个版本之后，第二个版本重新架构。</p>
                 <p class="text-sj">第二个版本开始构架，思路基本是把同类文件放一个文件夹，在按功能进行细分，view视图模块里按照的是视图性质分的，属于一级路由的模块的列表页和最外层的公共页放在一个文件夹，属于二级路由的或者说是子路由的，比如，详情页，添加页，编辑页类似的放在一个文件夹，模态框的放在一个文件夹；css改用啦sass，分别有common公共样式，list列表样式，form样式和各个模块的详情样式。js文件有app入口文件，router路由即配置文件，filter自定义过滤器文件，service自定义方法文件，directive指令文件和controller控制器文件;controller文件则根据功能模块分为不同的文件。 </p>
                 <p class="text-sj">第二个版本的架构在多人开发上不会产生太大的不便，结构也清楚，开发过程中不容易产生冲突。可是开发时间长啦之后，当你同时不同功能模块之间来回修改，发现文件目录结构虽然清楚，但view文件和sass文件和js文件是在三个不同的文件夹，找的时候非常不便，于是我打算在改进这种结构。</p>
                 <p class="text-sj">我将这个架构再进行改进，自己用一个model文件夹放大部分代码。用一个assets放静态文件和公共代码，如图片，视频等静态资源。js方面的directive和router放在assets文件夹下面，因为后期可以直接将directive抽离项目成为独立的指令库，这个文件也是公用的，只要一个人维护就好，model里的结构又按照功能模块切割，每个模块文件夹下面放与这个模块相关的东西，不管是view还是sass还是js,js还可以根据不同的作用区分成几个文件。这样可以最大程度的避免多人开发遇到的冲突问题，同时几个人开发都不会用问题。由于最后都会用gulp将分散的sass和js合并打包，所有并不需要担心文件归类杂乱的问题。</p>

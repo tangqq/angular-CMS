@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>易车生活，继续前进</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/tqqStyle.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body id="glh">
+<header class="selfhealth">
+    ——不断前行！
+</header>
+<section class="pd-sm">
+    <h2 class="body-title">前言</h2>
+    <div class="pd-xs border-top text-sj">还是业务的开发，两个系统，一个管理后台，一个用户端。一样是业务的开发，一个用了angular栈，一个用的react栈。慢慢发现
+    遇到了瓶颈，现在学习一个新东西都是直接上官方文档，从接触到使用一个新技术已经不用花太多时间学了，也没有遇到过比较困难的需求，但感觉还是只是写业务，技术的深度不够。</div>
+</section>
+<section class="pd-sm">
+    <h2 class="body-title">项目总结</h2>
+    <div class="pd-xs border-top">
+        <p class="text-sj">一个系统，用户端是react+redux开发，redux的公共state树只存放一些公共的组件共享数据。其他的组件内部的私有数据都是放在组件内部的state。
+        样式布局方面，由于开发人员少，就用的是媒体查询写了两套css的样式，一套Pc端，一套移动端，这样html结构的公用的，在功能修改的时候不用改两套代码，只是css写的时候要考虑的问题会多一点</p>
+        <p class="text-sj">至于管理端使用的angular开发已经没什么介绍了，已经没用什么困难了，模块化，指令化，添加一个新模块只是改改接口名，改改需要显示的属性值，再修改修改表单了。</p>
+        <p>版本管理一直是一个mastr和一个dev两个分支为主，dev为开发分支，新功能重dev分出新分支开发完成后更新到dev进行测试，测试完成就合并到mastr准备上线</p>
+    </div>
+</section>
+<section class="pd-sm">
+    <h2 class="body-title">学习总结</h2>
+    <div >
+        <p class="text-sj">由于前端慢慢感觉遇到瓶颈，有时间的时候就看了一下express+node+mongodb的开发栈，后来公司要自己重构官网，就用的是express+mongodb+node开发，并使用angular4开发了管理端，
+        由于是官网，所以比较简单，就一个文章模块，一个分类模块，一个用户模块。也对后端有一个了解，了解了后端api文档的重要性，也使用了apidoc生成api文档，能更好的解决前后端的沟通成本</p>
+    </div>
+</section>
+</body>
+</html>

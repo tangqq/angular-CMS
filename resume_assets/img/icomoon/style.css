@@ -72,4 +72,6 @@
 .icon-airplane:before {
     content: "\e9af";
 }
-
+a{
+    text-decoration: none;
+}

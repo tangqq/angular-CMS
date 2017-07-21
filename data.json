@@ -11,6 +11,14 @@
 },
   "list":
   [
+    {"title":"2017,燕鑫康达....",
+      "date":"2016-10-23",
+      "href":"resume_assets/view/selfhealth.html",
+      "content":"在这里是担任前端主管，开发一个测评预约系统，用户端react开发，主要功能为登陆验证，答题，预约。管理端angular开发,主要功能有问卷配置，匹配规则配置，体检项目配置，卡号管理等",
+      "icon":"icon icon-airplane",
+      "bgClass":"cd-movie",
+      "imgClass":"eleven-back"
+    },
     {"title":"2016,易车生活....",
     "date":"2015-11-13",
       "href":"resume_assets/view/ecl.html",

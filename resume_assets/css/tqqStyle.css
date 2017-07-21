@@ -639,7 +639,12 @@ header {
     color: #fff;
     text-shadow: #000 0 1px 0;
     background-position: top right; }
-
+  header.selfhealth{
+    background-image: url(../img/thisImg/selfhealthTitle.jpg);
+    color: #fff;
+    text-shadow: #000 0 1px 0;
+    background-position: bottom right;
+  }
 .download {
   padding: 10px;
   background: #6463ff;
@@ -680,7 +685,12 @@ header {
     content: '';
     display: table;
     clear: both; }
-
+.eleven-back{
+  background-image: url(../img/thisImg/11.jpg);
+  background-size: 100% 100%;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
 .two-back {
   background-image: url(../img/thisImg/twoback.jpg);
   background-size: auto 100%;
